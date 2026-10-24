@@ -49,7 +49,7 @@ export function RegistrationModal({
       .catch(() => {
         if (current)
           setMessage(
-            "Registration is unavailable because the local backend is not connected. Start the backend and reopen this form.",
+            "Applications are not available on this website yet. Please check back for registration updates.",
           );
       });
     return () => {

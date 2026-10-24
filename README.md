@@ -170,8 +170,12 @@ Browser QA separately exercised a real synthetic registration with resume select
 
 ## Hosting boundary
 
-Keep this phase local. A static/serverless frontend host cannot persist this SQLite file or local resume directory automatically. Future public hosting needs a persistent backend process, durable private disk, HTTPS, backup operations, and a reviewed security/privacy configuration. This project does not migrate to a cloud service or deploy applicant data.
+Keep this phase local. A static/serverless frontend host cannot persist this SQLite file or local resume directory automatically. Future public hosting needs a persistent backend process, durable private disk, HTTPS, backup operations, and a reviewed security/privacy configuration. The SQLite backend and applicant data are not migrated to a cloud service.
 
 ## Academy logo
 
 The supplied black-and-white Pramaan Forensic logo is used in the public header/footer, administrator login/sidebar, and browser icon. The original artwork is preserved, without cropping or recoloring, on a white tile for contrast with the navy interface. `AcademyLogo` centralizes its rendering.
+
+## Vercel public website
+
+`vercel.json` deploys the Vite frontend, including the supplied logo, to the `pfsa` project. `/admin` resolves to the SPA. A small stateless API boundary returns HTTP 503 with an explicit unavailable message for hosted registration/admin endpoints. It never stores or accepts applicant records. The registration form remains disabled when the persistent backend is unavailable. The Express/SQLite local application and its secure upload directory remain unchanged; `npm run dev` and `npm start` continue to use the real local API. A future hosted backend requires persistent private storage and a separately reviewed configuration.

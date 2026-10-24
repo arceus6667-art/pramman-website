@@ -4,10 +4,11 @@ Executed with Node.js 24.22.1 in Linux.
 
 ## Automated checks
 
-`npm test`: **37 passed, 0 failed**.
+`npm test`: **38 passed, 0 failed**.
 
 Coverage includes:
 
+- Vercel hosted API explicitly returns 503 without accepting applicant data; frontend routing configuration verified.
 - Exactly six canonical domain IDs and structured learning content.
 - Independent server-validated registration in all six domains.
 - Required fields, email, consent, reason length, file extension, MIME, content, and 5 MB limits.
