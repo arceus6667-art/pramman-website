@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.sites-runtime/
+.env*
+data/
+uploads/
+backend/dist/
+*.sqlite*
+*.db*
+*.zip
+.env
+!.env.example
